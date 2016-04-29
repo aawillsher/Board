@@ -1,0 +1,40 @@
+<template name = 'main'>
+  <br /><br />
+  <div class = 'container'>
+    <div class = 'row'>
+
+      <div class = 'col-md-4'>
+        <h3><span class = 'leftTitle'>Post Something For Your Followers</span></h3><br />
+        {{> quickForm collection = 'Posts' id = 'insertPostForm' type = 'insert'}}
+        <br />
+        <a href = '#' class = 'btn btn-warning logout'>Log out</a>
+        <a href = '#' class = 'btn btn-info about'>About Board</a>
+
+      </div>
+
+      <div class = 'main col-md-4'>
+        <h3><span class = 'middleTitle'>Messages From Users You Follow</span></h3><br />
+          <ul>
+            {{#each posts}}
+            <li><span class = 'titleText'>{{title}}</span></li>
+            <li><span class = 'dateText'>Posted by {{formatName createdBy}} on {{formatDate createdAt}}</span></li>
+            <li><span class = 'messageText'>{{content}}</span></li>
+            <br />
+            {{/each}}
+          </ul>
+      </div>
+
+      <div class = 'col-md-4'>
+        <h3><span class = 'rightTitle'>All Board Users</span></h3><br />
+        <ul>
+          {{#each otherUsers}}
+            <li>{{formatName _id}} <div class = 'change btn btn-{{buttonType}} btn-xs'>{{buttonText}}</div></li><br />
+          {{/each}}
+        </ul>
+
+      </div>
+
+    </div>
+  </div>
+
+</template>

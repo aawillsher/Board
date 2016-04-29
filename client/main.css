@@ -1,0 +1,59 @@
+h1 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 50px;
+}
+
+h1 span {
+  display: inline;
+  background-color: #f2f2f2;
+}
+
+h2, h3 {
+  font-family: 'Oswald';
+}
+
+h2 span {
+  display: inline;
+  background-color: #f7be81
+}
+
+.main {
+  word-wrap: break-word;
+}
+
+
+.titleText {
+  font-size: 13px;
+  font-weight: bold;
+  background-color: #f0f3f4;
+}
+
+.dateText {
+  font-size: 13px;
+  background-color: #f0f3f4;
+}
+
+.messageText {
+  font-size: 16px;
+}
+
+li {
+  list-style-type: none;
+}
+
+.loggedIn {
+  font-family: Helvetica;
+  background-color: #f3f781;
+}
+
+.middleTitle {
+  background-color: #eafaf1;
+}
+
+.leftTitle {
+  background-color: #fadbd8;
+}
+
+.rightTitle {
+  background-color: #edbb99;
+}
