@@ -22,10 +22,16 @@ h2 span {
 }
 
 
-.titleText {
+.otherTitleText {
   font-size: 13px;
   font-weight: bold;
   background-color: #f0f3f4;
+}
+
+.ownTitleText {
+  font-size: 13px;
+  font-weight: bold;
+  background-color: orange;
 }
 
 .dateText {
@@ -60,4 +66,12 @@ li {
 
 .homeDiv {
   width: 100%;
+}
+
+.ownMessage {
+  background-color: orange;
+}
+
+.otherMessage {
+  background-color: red;
 }

@@ -16,7 +16,7 @@ Template.main.events({
 
 Template.main.helpers({
   'posts': function () {
-    return Posts.find({createdBy: { $in: Meteor.user().profile.following }}, {sort: {createdAt: -1}})
+    return Posts.find({ $or: [ { createdBy: { $in: Meteor.user().profile.following}}, { createdBy: Meteor.userId()}]}, {sort: {createdAt: -1}});
   },
   'otherUsers': function () {
     return Meteor.users.find({ _id: {$ne: Meteor.userId()}});
@@ -48,5 +48,15 @@ Template.registerHelper('buttonType', function (user) {
     return 'success'
   } else {
     return 'danger'
+  }
+});
+
+Template.registerHelper('messageType', function (message) {
+  var x = this._id;
+  var y = Posts.findOne({_id: this._id}).createdBy;
+  if (y === Meteor.userId()) {
+    return 'ownTitleText'
+  } else {
+    return 'otherTitleText'
   }
 });

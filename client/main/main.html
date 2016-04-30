@@ -13,11 +13,13 @@
       </div>
 
       <div class = 'main col-lg-4'>
-        <h3><span class = 'middleTitle'>Messages From Users You Follow</span></h3><br />
+        <h3><span class = 'middleTitle'>Messages</span></h3><br />
+        <span class = 'ownTitleText'>Your messages</span>
+        <span class = 'otherTitleText'>Messages from users you follow</span><br /><br />
           <ul>
             {{#each posts}}
-            <li><span class = 'titleText'>{{title}}</span></li>
-            <li><span class = 'dateText'>Posted by {{formatName createdBy}} on {{formatDate createdAt}}</span></li>
+            <li><span class = '{{messageType}}'>{{title}}</span></li>
+            <li><span class = 'messageText'>Posted by {{formatName createdBy}} on {{formatDate createdAt}}</span></li>
             <li><span class = 'messageText'>{{content}}</span></li>
             <br />
             {{/each}}
