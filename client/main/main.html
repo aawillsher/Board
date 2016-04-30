@@ -1,9 +1,9 @@
 <template name = 'main'>
   <br /><br />
-  <div class = 'container'>
+
     <div class = 'row'>
 
-      <div class = 'col-sm-4'>
+      <div class = 'col-lg-4'>
         <h3><span class = 'leftTitle'>Post Something For Your Followers</span></h3><br />
         {{> quickForm collection = 'Posts' id = 'insertPostForm' type = 'insert'}}
         <br />
@@ -12,7 +12,7 @@
 
       </div>
 
-      <div class = 'main col-sm-4'>
+      <div class = 'main col-lg-4'>
         <h3><span class = 'middleTitle'>Messages From Users You Follow</span></h3><br />
           <ul>
             {{#each posts}}
@@ -24,7 +24,7 @@
           </ul>
       </div>
 
-      <div class = 'col-sm-4'>
+      <div class = 'col-lg-4'>
         <h3><span class = 'rightTitle'>All Board Users</span></h3><br />
         <ul>
           {{#each otherUsers}}
@@ -35,6 +35,6 @@
       </div>
 
     </div>
-  </div>
+
 
 </template>
