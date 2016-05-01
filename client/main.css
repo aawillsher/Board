@@ -21,39 +21,28 @@ h2 span {
   word-wrap: break-word;
 }
 
-
-.otherTitleText {
-  font-size: 13px;
-  font-weight: bold;
-  background-color: #f0f3f4;
-}
-
-.ownTitleText {
-  font-size: 13px;
-  font-weight: bold;
-  background-color: orange;
-}
-
-.dateText {
-  font-size: 13px;
-  background-color: #f0f3f4;
-}
-
 .messageText {
-  font-size: 16px;
+  font-size: 14px;
+}
+
+.messageTitle {
+  font-weight: bold;
+}
+
+.ownPost {
+  background-color: #edfee5;
 }
 
 li {
   list-style-type: none;
 }
 
-.loggedIn {
-  font-family: Helvetica;
-  background-color: #f3f781;
+ul {
+  padding-left: 0;
 }
 
 .middleTitle {
-  background-color: #eafaf1;
+  background-color: #fbf371;
 }
 
 .leftTitle {
@@ -62,16 +51,4 @@ li {
 
 .rightTitle {
   background-color: #edbb99;
-}
-
-.homeDiv {
-  width: 100%;
-}
-
-.ownMessage {
-  background-color: orange;
-}
-
-.otherMessage {
-  background-color: red;
 }

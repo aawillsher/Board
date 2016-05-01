@@ -27,8 +27,13 @@ Template.registerHelper('formatDate', function (date) {
   return moment(date).format('MMMM D, YYYY, h:mm a')
 });
 
+
+
 Template.registerHelper('formatName', function (id) {
-  return Meteor.users.findOne({_id: id}).profile.name;
+  if (Meteor.users.findOne({_id: id}).profile.name === Meteor.user().profile.name) {
+    return 'you'} else {
+      return Meteor.users.findOne({_id: id}).profile.name
+    }
 });
 
 Template.registerHelper('buttonText', function (user) {
@@ -55,8 +60,8 @@ Template.registerHelper('messageType', function (message) {
   var x = this._id;
   var y = Posts.findOne({_id: this._id}).createdBy;
   if (y === Meteor.userId()) {
-    return 'ownTitleText'
+    return 'ownPost'
   } else {
-    return 'otherTitleText'
+    return 'otherPost'
   }
 });
