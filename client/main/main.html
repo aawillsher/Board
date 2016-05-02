@@ -1,7 +1,8 @@
 <template name = 'main'>
   <br /><br />
   <a href = '#' class = 'btn btn-warning logout'>Log out</a>
-  <a href = '#' class = 'btn btn-info about'>About Board</a><br /><br />
+  <a href = '#' class = 'btn btn-info about'>About Board</a>
+  <a href = '/users' class = 'btn btn-success'>Users</a><br /><br />
 
     <div class = 'row'>
 
@@ -12,7 +13,7 @@
 
       </div>
 
-      <div class = 'main col-lg-5'>
+      <div class = 'main col-lg-8'>
         <h3><span class = 'middleTitle'>Messages</span></h3><br />
           <ul>
             {{#each posts}}
@@ -24,15 +25,7 @@
           </ul>
       </div>
 
-      <div class = 'col-lg-3'>
-        <h3><span class = 'rightTitle'>All Board Users</span></h3><br />
-        <ul>
-          {{#each otherUsers}}
-            <li>{{formatName _id}} <div class = 'change btn btn-{{buttonType}} btn-xs'>{{buttonText}}</div></li><br />
-          {{/each}}
-        </ul>
 
-      </div>
 
     </div>
 

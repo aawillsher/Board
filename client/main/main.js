@@ -24,10 +24,14 @@ Template.main.helpers({
 });
 
 Template.registerHelper('formatDate', function (date) {
-  return moment(date).format('MMMM D, YYYY, h:mm a')
+  var a = new Date();
+  var isSameDay = (a.getDate() == date.getDate() && a.getMonth() == date.getMonth() && a.getFullYear() == date.getFullYear());
+  if (isSameDay) {
+    return moment(date).format('h:mm a')
+  } else {
+    return moment(date).format('MMMM D, YYYY, h:mm a')
+  }
 });
-
-
 
 Template.registerHelper('formatName', function (id) {
   if (Meteor.users.findOne({_id: id}).profile.name === Meteor.user().profile.name) {

@@ -1,0 +1,12 @@
+<template name = 'users'>
+  <br /><br />
+  <a href = '#' class = 'btn btn-warning logout'>Log out</a>
+  <a href = '#' class = 'btn btn-info about'>About Board</a>
+  <a href = '/main' class = 'btn btn-success'>Messages</a><br /><br />
+  <h3><span class = 'rightTitle'>All Board Users</span></h3><br />
+  <ul>
+    {{#each otherUsers}}
+      <li>{{formatName _id}} <div class = 'change btn btn-{{buttonType}} btn-xs'>{{buttonText}}</div></li><br />
+    {{/each}}
+  </ul>
+</template>
